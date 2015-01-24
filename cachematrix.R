@@ -20,12 +20,12 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 
-## Write a short comment describing this function
+## The code below checks to see if the inverse of the matrix has already been found, and if so it returns that value from the
+##cache. If the inverse has not been found, the solve command is used to calculate and return it.
 
 cacheSolve <- function(x, ...) {
   invFunc <- x$getInverse()
   if(!is.null(invFunc)) {
-    message("get cached data")
     return(invFunc)
   }
   data <- x$get()
